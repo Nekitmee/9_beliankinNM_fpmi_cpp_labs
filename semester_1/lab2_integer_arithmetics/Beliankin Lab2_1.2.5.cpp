@@ -1,8 +1,8 @@
 ﻿#include <iostream>
 
 //Функция: Проверка числа на натуральность 
-bool natural(int a) {
-    if (a < 1) {
+bool natural(int num1) {
+    if (num1 < 1) {
         std::cout << "Ошибка! Число должно быть натуральным.\n";
         return false;
     }
@@ -12,12 +12,12 @@ bool natural(int a) {
 }
 
 //Функция: Проверка числа на палиндром
-bool palindrome(int b) {
-    int original = b;
+bool palindrome(int num2) {
+    int original = num2;
     int rev = 0;
-    while (b > 0) {
-        rev = rev * 10 + b % 10;
-        b /= 10;
+    while (num2 > 0) {
+        rev = rev * 10 + num2 % 10;
+        num2 /= 10;
     }
     return (original == rev);
 }
