@@ -30,7 +30,7 @@ int main()
                 std::cout << "Введите " << i + 1 << " элемент массива: ";
                 std::cin >> arr[i];
                 if (std::cin.fail()) {
-                    std::cout << "\nОшибка, попробуйте еще раз";
+                    std::cout << "\nОшибка, попробуйте еще раз!";
                     std::cin.clear();
                     std::cin.ignore(10000, '\n');
                     return 0;
@@ -103,7 +103,6 @@ int main()
                 while (insertPos < i && arr[insertPos] >= 0 && arr[insertPos] <= 10) {
                     insertPos++;
                 }
-
                 if (insertPos < i) {
                     for (int j = i; j > insertPos; j--) {
                         std::swap(arr[j], arr[j - 1]);
